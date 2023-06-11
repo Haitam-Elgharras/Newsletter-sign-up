@@ -1,0 +1,170 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Tomato: hsl(4, 100%, 67%)
+
+### Neutral
+
+- Dark Slate Grey: hsl(234, 29%, 20%)
+- Charcoal Grey: hsl(235, 18%, 26%)
+- Grey: hsl(231, 7%, 60%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Roboto](https://fonts.google.com/specimen/Roboto)
+- Weights: 400, 700
+*/
+
+:root {
+  --tomato: rgb(255, 98, 87);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --font-size: 16px;
+  --font-family: "Roboto", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+body {
+  background-color: var(--dark-slate-grey);
+  min-height: 100vh;
+  align-items: center;
+}
+.container {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-slate-grey);
+  height: 100%;
+  align-items: center;
+}
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem 0 2.9rem;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+.container .card h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--dark-slate-grey);
+  line-height: 1;
+}
+
+form input[type="text"] {
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  padding: 8px 15px;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--charcoal-grey);
+}
+form button[type="submit"] {
+  background-color: var(--dark-slate-grey);
+  border: none;
+  border-radius: 4px;
+  color: var(--white);
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  padding: 8px 15px;
+  width: 100%;
+  cursor: pointer;
+}
+form label {
+  font-weight: bold;
+  color: var(--charcoal-grey);
+}
+span.error {
+  font-size: 13px;
+  color: var(--tomato);
+  display: none;
+}
+.card2-p {
+  font-size: 15px;
+  color: var(--charcoal-grey);
+}
+.card .dismiss {
+  height: 45px;
+  width: 100%;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 5px;
+  background-image: linear-gradient(45deg, #ff527b, #ff6a3a);
+  /* // box shadow discreption : offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 10px 30px -2px var(--tomato);
+  font-size: 13px;
+  font-family: var(--font-family);
+  transition: all 0.3s ease-in-out;
+}
+.card .dismiss:hover {
+  animation: anime 2s ease-in 0.1s infinite;
+}
+@keyframes anime {
+  0% {
+    transform: scale(1);
+    background-image: linear-gradient(60deg, #ff6a3a, #ff527b);
+  }
+  50% {
+    transform: scale(1.01);
+    background-image: linear-gradient(120deg, #ff6a3a, #ff527b);
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(320deg, #ff6a3a, #ff527b);
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    height: auto;
+    width: auto;
+    align-items: center;
+  }
+  .card {
+    flex-wrap: wrap-reverse;
+  }
+  div.img {
+    width: 100%;
+  }
+  div.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
